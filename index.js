@@ -29,7 +29,10 @@ hint - you should be looking at the stage key inside of the objects
 */
 
 function getFinals(data) {
-   
+   const finals = data.filter(function(item){
+       return item.Stage === 'Final'
+   })
+   return finals
 }
 
 
@@ -40,8 +43,9 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function getFinals from task 2 
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-function getYears(/* code here */) {
-    /* code here */
+function getYears(array, getFinalscb) {
+    const years = getFinalscb(array).map(item => item.Year)
+    return years
 }
 
 
