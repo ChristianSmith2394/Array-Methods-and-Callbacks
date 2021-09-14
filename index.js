@@ -113,9 +113,11 @@ Create a function called `getCountryWins` that takes the parameters `data` and `
 Hint: Investigate your data to find "team initials"!
 Hint: use `.reduce` */
 
-function getCountryWins(/* code here */) {
+function getCountryWins(data, teamInitials) {
 
-    /* code here */
+    return data.reduce(function(acc, item){
+        return acc + item['Home Team Initials']
+    })
 
 }
 
